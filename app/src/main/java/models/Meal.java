@@ -3,22 +3,28 @@ package models;
 
 import models.Weight.IWeight;
 
-public class Meal {
-    private String uniqueID;
-    private String name;
-    private IWeight colories;
-    private IWeight proteins;
-    private IWeight fats;
-    private IWeight carbohidrates;
-    private IWeight weight;
-    private IWeight row;
+import javax.persistence.*;
 
-    public void setUniqueID(String uniqueID) {
-        this.uniqueID = uniqueID;
+@Entity
+@Table(name = "meals")
+public class Meal {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long meal_id;
+    private String name;
+    private Integer colories;
+    private Integer proteins;
+    private Integer fats;
+    private Integer carbohidrates;
+    private Integer weight;
+    private Integer row;
+
+    public void setMealId(Long meal_id) {
+        this.meal_id = meal_id;
     }
 
-    public String getUniqueID() {
-        return uniqueID;
+    public Long getMealId() {
+        return meal_id;
     }
 
     public void setName(String name) {
@@ -29,51 +35,51 @@ public class Meal {
         return name;
     }
 
-    public IWeight getColories() {
+    public Integer getColories() {
         return colories;
     }
 
-    public void setColories(IWeight colories) {
+    public void setColories(Integer colories) {
         this.colories = colories;
     }
 
-    public IWeight getProteins() {
+    public Integer getProteins() {
         return proteins;
     }
 
-    public void setProteins(IWeight proteins) {
+    public void setProteins(Integer proteins) {
         this.proteins = proteins;
     }
 
-    public IWeight getFats() {
+    public Integer getFats() {
         return fats;
     }
 
-    public void setFats(IWeight fats) {
+    public void setFats(Integer fats) {
         this.fats = fats;
     }
 
-    public IWeight getCarbohidrates() {
+    public Integer getCarbohidrates() {
         return carbohidrates;
     }
 
-    public void setCarbohidrates(IWeight carbohidrates) {
+    public void setCarbohidrates(Integer carbohidrates) {
         this.carbohidrates = carbohidrates;
     }
 
-    public IWeight getWeight() {
+    public Integer getWeight() {
         return weight;
     }
 
-    public void setWeight(IWeight weight) {
+    public void setWeight(Integer weight) {
         this.weight = weight;
     }
 
-    public IWeight getRow() {
+    public Integer getRow() {
         return row;
     }
 
-    public void setRow(IWeight row) {
+    public void setRow(Integer row) {
         this.row = row;
     }
 }

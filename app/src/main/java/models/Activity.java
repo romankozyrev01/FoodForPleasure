@@ -1,20 +1,37 @@
 package models;
 
+import com.j256.ormlite.field.DataType;
+import com.j256.ormlite.field.DatabaseField;
+import com.j256.ormlite.table.DatabaseTable;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import java.sql.Date;
 import java.sql.Time;
 
+
+@Entity
+@Table(name = "activities")
 public class Activity {
-    private String uniqueID;
+    @DatabaseField(generatedId = true)
+    private Long activity_id;
+
+    @Column(name = "name")
     private String name;
-    private Time startTime;
-    private Time endTime;
+
+    @Column(name = "start_time")
+    private Date startTime;
+
+    @Column(name = "end_time")
+    private Date endTime;
+
+    @Column(name = "burned_colories")
     private int burnedCalories;
 
-    public String getUniqueID() {
-        return uniqueID;
-    }
 
-    public void setUniqueID(String uniqueID) {
-        this.uniqueID = uniqueID;
+    public Long getActivity_id() {
+        return activity_id;
     }
 
     public String getName() {
@@ -25,11 +42,11 @@ public class Activity {
         this.name = name;
     }
 
-    public Time getStartTime() {
+    public Date getStartTime() {
         return startTime;
     }
 
-    public void setStartTime(Time startTime) {
+    public void setStartTime(Date startTime) {
         this.startTime = startTime;
     }
 
@@ -41,11 +58,22 @@ public class Activity {
         this.burnedCalories = burnedCalories;
     }
 
-    public Time getEndTime() {
+    public Date getEndTime() {
         return endTime;
     }
 
-    public void setEndTime(Time endTime) {
+    public void setEndTime(Date endTime) {
         this.endTime = endTime;
+    }
+
+    @Override
+    public String toString() {
+        return "Activity{" +
+                "activity_id=" + activity_id +
+                ", name='" + name + '\'' +
+                ", startTime=" + startTime +
+                ", endTime=" + endTime +
+                ", burnedCalories=" + burnedCalories +
+                '}';
     }
 }

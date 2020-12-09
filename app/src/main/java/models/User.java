@@ -1,39 +1,59 @@
 package models;
 
 
-import models.Gender.IGender;
-import models.Height.IHeight;
-import models.Weight.IWeight;
-
+import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
+import java.util.Stack;
 
+@Entity
+@Table(name = "users")
 public class User {
-    private String uniqueID;
-    private String firsName;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long user_id;
+
+    @Column(name = "first_name")
+    private String firstName;
+
+    @Column(name = "last_name")
     private String lastName;
-    private IHeight height;    // needed to do it with interfaces
-    private IWeight startWeight;
-    private IWeight finalWeight;
+
+    @Column(name = "height")
+    private Integer height;
+
+    @Column(name = "start_weight")
+    private Double startWeight;
+
+    @Column(name = "final_weight")
+    private Double finalWeight;
+
+    @Column(name = "birthday")
+    @Temporal(TemporalType.DATE)
     private Date birthday;
-    private int stackID;
-    private IWeight currentWeight;
-    private IGender gender;
+
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinColumn(name = "stack_id")
+    private List<Stack> stacks;
+
+    @Column(name = "current_weight")
+    private Double currentWeight;
+
+    @Column(name = "gender")
+    private String gender;
 
 
-    public String getUniqueID() {
-        return uniqueID;
+    public Long getUser_id() {
+        return user_id;
     }
 
-    public void setUniqueID(String uniqueID) {
-        this.uniqueID = uniqueID;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public String getFirsName() {
-        return firsName;
-    }
-
-    public void setFirsName(String firsName) {
-        this.firsName = firsName;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
     public String getLastName() {
@@ -44,27 +64,27 @@ public class User {
         this.lastName = lastName;
     }
 
-    public IHeight getHeight() {
+    public Integer getHeight() {
         return height;
     }
 
-    public void setHeight(IHeight height) {
+    public void setHeight(Integer height) {
         this.height = height;
     }
 
-    public IWeight getStartWeight() {
+    public Double getStartWeight() {
         return startWeight;
     }
 
-    public void setStartWeight(IWeight startWeight) {
+    public void setStartWeight(Double startWeight) {
         this.startWeight = startWeight;
     }
 
-    public IWeight getFinalWeight() {
+    public Double getFinalWeight() {
         return finalWeight;
     }
 
-    public void setFinalWeight(IWeight finalWeight) {
+    public void setFinalWeight(Double finalWeight) {
         this.finalWeight = finalWeight;
     }
 
@@ -76,27 +96,27 @@ public class User {
         this.birthday = birthday;
     }
 
-    public int getStackID() {
-        return stackID;
+    public List<Stack> getStacks() {
+        return stacks;
     }
 
-    public void setStackID(int stackID) {
-        this.stackID = stackID;
+    public void setStacks(List<Stack> stacks) {
+        this.stacks = stacks;
     }
 
-    public IWeight getCurrentWeight() {
+    public Double getCurrentWeight() {
         return currentWeight;
     }
 
-    public void setCurrentWeight(IWeight currentWeight) {
+    public void setCurrentWeight(Double currentWeight) {
         this.currentWeight = currentWeight;
     }
 
-    public IGender getGender() {
+    public String getGender() {
         return gender;
     }
 
-    public void setGender(IGender gender) {
+    public void setGender(String gender) {
         this.gender = gender;
     }
 }
