@@ -1,6 +1,11 @@
 package models;
 
 
+import models.Gender.IGender;
+import models.Height.IHeight;
+import models.Weight.IWeight;
+
+import java.util.Date;
 
 public class User {
     private String uniqueID;

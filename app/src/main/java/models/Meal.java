@@ -1,6 +1,8 @@
 package models;
 
 
+import models.Weight.IWeight;
+
 public class Meal {
     private String uniqueID;
     private String name;
