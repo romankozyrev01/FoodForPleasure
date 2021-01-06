@@ -18,7 +18,7 @@ import java.sql.SQLException;
 public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
 
     private static final String DATABASE_NAME = "main.db";
-    private static final int DATABASE_VERSION = 3;
+    private static final int DATABASE_VERSION = 5;
 
     private Dao<User,Long> userDao = null;
     private RuntimeExceptionDao<User,Long> userRuntimeDao = null;
@@ -30,7 +30,7 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
     private RuntimeExceptionDao<Activity,Long> activityRuntimeDao = null;
 
     private Dao<UserActivityStack,Long> userStackDao = null;
-    private RuntimeExceptionDao<User,Long> userStackRuntimeDao = null;
+    private RuntimeExceptionDao<UserActivityStack,Long> userStackRuntimeDao = null;
 
     public DatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -72,18 +72,18 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
         return activityDao;
     }
 
-    public RuntimeExceptionDao<Activity, Long> getActivityRuntimeDao() {
-        if(activityRuntimeDao == null){
-            activityRuntimeDao = getRuntimeExceptionDao(Activity.class);
-        }
-        return activityRuntimeDao;
-    }
-
     public Dao<Meal, Long> getMealDao() throws SQLException {
         if(mealDao == null){
             mealDao = getDao(Meal.class);
         }
         return mealDao;
+    }
+
+    public RuntimeExceptionDao<Meal, Long> getMealRuntimeDao() {
+        if(mealRuntimeDao == null){
+            mealRuntimeDao = getRuntimeExceptionDao(Meal.class);
+        }
+        return mealRuntimeDao;
     }
 
     public Dao<User, Long> getUserDao() throws SQLException {
@@ -93,11 +93,32 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
         return userDao;
     }
 
+    public RuntimeExceptionDao<User, Long> getUserRuntimeDao() {
+        if(userRuntimeDao == null){
+            userRuntimeDao = getRuntimeExceptionDao(User.class);
+        }
+        return userRuntimeDao;
+    }
+
     public Dao<UserActivityStack, Long> getUserStackDao() throws SQLException {
         if(userStackDao == null){
             userStackDao = getDao(UserActivityStack.class);
         }
         return userStackDao;
+    }
+
+    public RuntimeExceptionDao<UserActivityStack,Long> getUserStackRuntimeDao() {
+        if(userStackRuntimeDao == null){
+            userStackRuntimeDao = getRuntimeExceptionDao(UserActivityStack.class);
+        }
+        return userStackRuntimeDao;
+    }
+
+    public RuntimeExceptionDao<Activity, Long> getActivityRuntimeDao() {
+        if(activityRuntimeDao == null){
+            activityRuntimeDao = getRuntimeExceptionDao(Activity.class);
+        }
+        return activityRuntimeDao;
     }
 
     @Override

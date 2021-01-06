@@ -43,6 +43,27 @@ public class User {
     @Column(name = "gender")
     private String gender;
 
+    @Column(name="daily_colories")
+    private  int dailyColories;
+
+    @Column(name="authorized_token")
+    private String authorizedToken;
+
+    public String getAuthorizedToken() {
+        return authorizedToken;
+    }
+
+    public void setAuthorizedToken(String authorizedToken) {
+        this.authorizedToken = authorizedToken;
+    }
+
+    public int getDailyColories() {
+        return dailyColories;
+    }
+
+    public void setDailyColories(int dailyColories) {
+        this.dailyColories = dailyColories;
+    }
 
     public Long getUser_id() {
         return user_id;
@@ -118,5 +139,28 @@ public class User {
 
     public void setGender(String gender) {
         this.gender = gender;
+    }
+
+    public Integer getAge(){
+       String[] str =  birthday.toString().split(" ");
+       return  2020 - Integer.parseInt(str[str.length - 1]);
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "user_id=" + user_id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", height=" + height +
+                ", startWeight=" + startWeight +
+                ", finalWeight=" + finalWeight +
+                ", birthday=" + birthday +
+                ", stacks=" + stacks +
+                ", currentWeight=" + currentWeight +
+                ", gender='" + gender + '\'' +
+                ", dailyColories=" + dailyColories +
+                ", authorizedToken='" + authorizedToken + '\'' +
+                '}';
     }
 }
