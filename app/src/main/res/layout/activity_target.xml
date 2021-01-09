@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Target" android:backgroundTint="#00000000">
+
+    <ImageView
+            android:layout_width="428dp"
+            android:layout_height="833dp" app:srcCompat="@android:drawable/dark_header"
+            android:id="@+id/imageView14" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" android:background="#B3000000"/>
+    <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.701"
+            app:layout_constraintEnd_toEndOf="parent" android:id="@+id/scrollView2">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:orientation="vertical">
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="220dp" app:srcCompat="@drawable/putoff" android:id="@+id/LoseWeight"
+                    android:scaleType="fitCenter"
+            />
+            <Button
+                    android:text="Сбросить вес"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/buttonLoseWeight" android:textStyle="bold"
+                    android:textSize="24sp" android:textColor="@android:color/white"
+                    android:fontFamily="sans-serif-thin" android:backgroundTint="#80000000"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+            <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp" app:srcCompat="@drawable/mussles"
+                    android:id="@+id/GainMuscleMass" android:scaleType="fitCenter"/>
+            <Button
+                    android:text="Набрать мышечную массу"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/buttonGainMuscleMass" android:textSize="24sp"
+                    android:fontFamily="sans-serif-thin" android:textColor="@android:color/white"
+                    android:textStyle="bold" android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:backgroundTint="#80000000"/>
+            <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp" app:srcCompat="@drawable/putofweight"
+                    android:id="@+id/GainWeight"/>
+            <Button
+                    android:text="Набрать вес"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/buttonGainWeight" android:textStyle="bold"
+                    android:textColor="@android:color/white" android:textSize="24sp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1" android:backgroundTint="#80000000"
+                    android:fontFamily="sans-serif-thin"/>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

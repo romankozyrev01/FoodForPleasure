@@ -169,10 +169,12 @@
             app:layout_constraintVertical_bias="0.407"
             android:textStyle="bold" app:layout_constraintHorizontal_bias="0.094"/>
     <Button
-            android:text="Button"
+            android:text="Далее"
             android:onClick="submit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/submitButton"
+            android:layout_width="120dp"
+            android:layout_height="56dp" android:id="@+id/submitButton"
             app:layout_constraintBottom_toBottomOf="@+id/BackGroundBMI" app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="160dp" android:layout_marginBottom="116dp"/>
+            android:layout_marginEnd="144dp" android:layout_marginBottom="100dp" android:textStyle="bold"
+            android:textColor="@android:color/white" android:textSize="24sp" android:fontFamily="sans-serif-thin"
+            android:backgroundTint="#80000000"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
