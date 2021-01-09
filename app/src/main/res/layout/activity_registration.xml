@@ -51,7 +51,7 @@
             android:textSize="24sp" android:fontFamily="sans-serif-thin" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="@+id/imageView"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.262"
-            app:layout_constraintVertical_bias="0.455"/>
+            app:layout_constraintVertical_bias="0.455" android:textColor="@android:color/white"/>
     <EditText
             android:textColorHint="@android:color/white"
             android:layout_width="350dp"
@@ -63,7 +63,7 @@
             android:textSize="24sp" android:fontFamily="sans-serif-thin" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="@+id/imageView"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.262"
-            app:layout_constraintVertical_bias="0.56"/>
+            app:layout_constraintVertical_bias="0.56" android:textColor="@android:color/white"/>
     <EditText
             android:textColorHint="@android:color/white"
             android:layout_width="350dp"
@@ -75,7 +75,8 @@
             android:textStyle="bold" app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.262"
-            app:layout_constraintVertical_bias="0.659" android:password="false"/>
+            app:layout_constraintVertical_bias="0.659" android:password="false"
+            android:textColor="@android:color/white"/>
     <Button
             android:text="@string/next"
             android:layout_width="wrap_content"
