@@ -28,7 +28,6 @@ public class MainActivity extends OrmLiteBaseActivity<DatabaseHelper>{
         IUserDao userDao = new UserDao(getHelper().getUserRuntimeDao());
         List<User> users = userDao.queryAll();
 
-
         if(users.size()>0){
             User user = users.get(0);
             IDailyNutrients dailyColories = new DailyColories(user.getStartWeight(),user.getHeight(),user.getAge());
