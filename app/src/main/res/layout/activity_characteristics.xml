@@ -8,6 +8,13 @@
         tools:context=".CharacteristicsActivity">
 
     <ImageView
+            android:src="@drawable/characteristics"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/imageView3"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" android:scaleType="centerCrop"/>
+    <ImageView
             android:layout_width="381dp"
             android:layout_height="288dp" app:srcCompat="@android:drawable/dark_header"
             android:id="@+id/imageView_DarcBackGround2"
