@@ -4,8 +4,8 @@
     <string name="enterBirthday">Введите дату рождения</string>
     <string name="enterSecondName">Введите свою фамилию</string>
     <string name="enterFirstName">Введите свое имя</string>
-    <string name="registration">Регистрация</string>
+    <string name="registration">Добавление нового пользователя</string>
     <string name="greetings">Вас приветствует</string>
-    <string name="process">Расчетать</string>
+    <string name="process">Рассчитать</string>
 
 </resources>
