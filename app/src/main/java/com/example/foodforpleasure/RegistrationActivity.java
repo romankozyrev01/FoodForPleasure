@@ -43,6 +43,5 @@ public class RegistrationActivity extends AppCompatActivity {
         else{
             System.out.println("Exists the null field");
         }
-
     }
 }

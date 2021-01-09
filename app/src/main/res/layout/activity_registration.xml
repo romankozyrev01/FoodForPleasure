@@ -88,4 +88,32 @@
             app:layout_constraintVertical_bias="0.831"
             android:textColor="@android:color/white" android:textStyle="bold" android:textSize="24sp"
             android:fontFamily="sans-serif-thin" android:backgroundTint="#80000000"/>
+    <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            android:drawablePadding="50dp"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.661" android:id="@+id/CheckGender">
+        <RadioButton
+                android:text="Мужчина"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/radioButtonMale"
+                android:fontFamily="sans-serif-thin" android:textSize="24sp"
+                android:textStyle="bold" android:textColor="@android:color/white"
+                style="@style/Widget.AppCompat.CompoundButton.RadioButton" android:buttonTint="#FFFFFF"
+        />
+        <TextView
+                android:layout_width="76dp"
+                android:layout_height="wrap_content" android:id="@+id/textViewSpace" android:layout_weight="1"/>
+        <RadioButton
+                android:text="Женщина"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/radioButtonFemale"
+                android:fontFamily="sans-serif-thin" android:textSize="24sp"
+                android:textStyle="bold" android:textColor="@android:color/white"
+                style="@style/Widget.AppCompat.CompoundButton.RadioButton" android:buttonTint="#FFFFFF"
+        />
+    </RadioGroup>
 </androidx.constraintlayout.widget.ConstraintLayout>
