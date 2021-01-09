@@ -1,9 +1,10 @@
 package dbAPI.dao;
 
-import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.dao.RuntimeExceptionDao;
 import dbAPI.dao.IDao.IActivityDao;
 import models.Activity;
+
+import java.util.List;
 
 public class ActivityDao implements IActivityDao {
     RuntimeExceptionDao<Activity,Long> activityRuntimeDao;
@@ -19,18 +20,21 @@ public class ActivityDao implements IActivityDao {
 
     @Override
     public void create(Activity activity) {
-        if(activityRuntimeDao != null){
-            activityRuntimeDao.create(activity);
-        }
+        activityRuntimeDao.create(activity);
     }
 
     @Override
-    public void update(Activity user) {
-
+    public void update(Activity activity) {
+        activityRuntimeDao.update(activity);
     }
 
     @Override
-    public void delete(Activity user) {
+    public void delete(Activity activity) {
+        activityRuntimeDao.delete(activity);
+    }
 
+    @Override
+    public List<Activity> queryAll() {
+        return activityRuntimeDao.queryForAll();
     }
 }
