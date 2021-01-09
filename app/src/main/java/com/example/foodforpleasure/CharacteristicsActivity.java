@@ -1,11 +1,11 @@
 package com.example.foodforpleasure;
 
-import Services.Validators.FieldValidators.IFieldValidator;
-import Services.Validators.FieldValidators.StringFieldValidator;
+import Services.ActivityService;
+import Services.Validators.FieldValidatorServices.IFieldValidator;
+import Services.Validators.FieldValidatorServices.StringFieldValidator;
 import android.content.Intent;
 import android.view.View;
 import android.widget.EditText;
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import com.j256.ormlite.android.apptools.OrmLiteBaseActivity;
 import dbAPI.DatabaseHelper;
@@ -19,13 +19,19 @@ import java.util.Date;
 import java.util.Random;
 
 public class CharacteristicsActivity extends OrmLiteBaseActivity<DatabaseHelper> {
-    private int height;
-    private double weight;
-
     public static final String FIRST_USER_NAME = "firstName";
     public static final String SECOND_USER_NAME = "secondName";
     public static final String DATE = "date";
+    public static final String GENDER = "gender";
 
+    private final ActivityService activityService = new ActivityService();
+    private int height;
+    private double weight;
+    private String gender;
+    String secondName;
+    String firstName;
+    Date date;
+    Random random = new Random();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,22 +53,22 @@ public class CharacteristicsActivity extends OrmLiteBaseActivity<DatabaseHelper>
         }
 
         Intent intent = getIntent();
-        String firstName = intent.getStringExtra(FIRST_USER_NAME);
-        String secondName = intent.getStringExtra(SECOND_USER_NAME);
-        Date date = new SimpleDateFormat( "dd/MM/yyyy" ).parse(intent.getStringExtra(DATE));
+        gender = intent.getStringExtra(GENDER);
+        firstName = intent.getStringExtra(FIRST_USER_NAME);
+        secondName = intent.getStringExtra(SECOND_USER_NAME);
+        date = new SimpleDateFormat( "dd/MM/yyyy" ).parse(intent.getStringExtra(DATE));
 
         IUserDao userDao = new UserDao(getHelper().getUserRuntimeDao());
         User user = new User();
-        Random random = new Random();
         user.setFirstName(firstName);
         user.setLastName(secondName);
         user.setAuthorizedToken(firstName+secondName+date+random.nextDouble());
         user.setBirthday(date);
         user.setStartWeight(weight);
         user.setHeight(height);
+        user.setGender(gender);
         userDao.create(user);
 
-        Intent intentToMain = new Intent(this, MainActivity.class);
-        startActivity(intentToMain);
+        activityService.startBodeMassIndexesActivity(this);
     }
 }

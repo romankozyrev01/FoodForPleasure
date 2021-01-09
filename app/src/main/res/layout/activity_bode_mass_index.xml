@@ -5,7 +5,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".BodeMassIndex">
+        tools:context=".BodeMassIndexesActivity">
 
     <ImageView
             android:layout_width="wrap_content"
@@ -14,8 +14,8 @@
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" android:scaleType="centerCrop"/>
     <ImageView
-            android:layout_width="391dp"
-            android:layout_height="716dp" app:srcCompat="@android:drawable/dark_header"
+            android:layout_width="630dp"
+            android:layout_height="996dp" app:srcCompat="@android:drawable/dark_header"
             android:id="@+id/imageView5"
             android:background="#80000000" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="@+id/BackGroundBMI"
@@ -63,7 +63,7 @@
     <TextView
             android:text="0"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/userCaloriesBreitmanIndex"
+            android:layout_height="wrap_content" android:id="@+id/userBreitmanIndex"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
             android:textColor="@android:color/white" android:textSize="24sp" android:fontFamily="sans-serif-thin"
@@ -72,7 +72,7 @@
     <TextView
             android:text="0"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/userCaloriesNoordenIndex"
+            android:layout_height="wrap_content" android:id="@+id/userNoordenIndex"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
             android:textColor="@android:color/white" android:textSize="24sp" android:fontFamily="sans-serif-thin"
@@ -81,7 +81,7 @@
     <TextView
             android:text="0"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/userCaloriesTatonIndex"
+            android:layout_height="wrap_content" android:id="@+id/userTatonIndex"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
             android:textColor="@android:color/white" android:textSize="24sp" android:fontFamily="sans-serif-thin"
@@ -90,7 +90,7 @@
     <TextView
             android:text="0"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/userCaloriesMassIndex"
+            android:layout_height="wrap_content" android:id="@+id/userMassIndex"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
             android:textColor="@android:color/white" android:textSize="24sp" android:fontFamily="sans-serif-thin"
@@ -99,7 +99,7 @@
     <TextView
             android:text="0"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/userCaloriesBrokeIndex"
+            android:layout_height="wrap_content" android:id="@+id/userBrokeIndex"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
             android:textColor="@android:color/white" android:textSize="24sp" android:fontFamily="sans-serif-thin"
@@ -168,4 +168,11 @@
             android:textColor="@android:color/white" android:textSize="24sp" android:fontFamily="sans-serif-thin"
             app:layout_constraintVertical_bias="0.407"
             android:textStyle="bold" app:layout_constraintHorizontal_bias="0.094"/>
+    <Button
+            android:text="Button"
+            android:onClick="submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/submitButton"
+            app:layout_constraintBottom_toBottomOf="@+id/BackGroundBMI" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="160dp" android:layout_marginBottom="116dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

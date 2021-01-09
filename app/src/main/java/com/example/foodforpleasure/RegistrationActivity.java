@@ -1,10 +1,12 @@
 package com.example.foodforpleasure;
 
-import Services.Validators.FieldValidators.DateValidator;
-import Services.Validators.FieldValidators.StringFieldValidator;
+import Services.Validators.FieldValidatorServices.DateValidator;
+import Services.Validators.FieldValidatorServices.StringFieldValidator;
 import android.content.Intent;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -22,6 +24,7 @@ public class RegistrationActivity extends AppCompatActivity {
         EditText editTextDate = findViewById(R.id.editText_UserBirthday);
         EditText editTextFirstName = findViewById(R.id.editText_UserFirstName);
         EditText editTextSecondName = findViewById(R.id.editText_UserSecondName);
+        RadioButton radioButtonWomen = findViewById(R.id.radioButtonFemale);
 
         String date = editTextDate.getText().toString();
         String userFirstName = editTextFirstName.getText().toString();
@@ -38,6 +41,13 @@ public class RegistrationActivity extends AppCompatActivity {
             intent.putExtra(CharacteristicsActivity.FIRST_USER_NAME,userFirstName);
             intent.putExtra(CharacteristicsActivity.SECOND_USER_NAME, userSecondName);
             intent.putExtra(CharacteristicsActivity.DATE, date);
+            if(radioButtonWomen.isActivated()){
+                intent.putExtra(CharacteristicsActivity.GENDER,"Женщина");
+            }
+            else {
+                intent.putExtra(CharacteristicsActivity.GENDER,"Мужчина");
+            }
+
             startActivity(intent);
         }
         else{
