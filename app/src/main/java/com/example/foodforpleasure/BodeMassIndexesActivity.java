@@ -59,7 +59,7 @@ public class BodeMassIndexesActivity extends OrmLiteBaseActivity<DatabaseHelper>
             IMassIndex brokeIndex = new BrokeIndex(height);
             IMassIndex breitmanIndex = new BreitmanIndex(height);
 
-            userMassIndexTextView.setText(massIndex.getIndex().toString());
+            userMassIndexTextView.setText(massIndex.toString());
             userBreitmanIndexTextView.setText(new Kilogram(breitmanIndex.getIndex().getWeight()).toString());
             userNoordenIndexTextView.setText(new Kilogram(noordenIndex.getIndex().getWeight()).toString());
             userTatonIndexTextView.setText(new Kilogram(tatonIndex.getIndex().getWeight()).toString());
@@ -72,6 +72,6 @@ public class BodeMassIndexesActivity extends OrmLiteBaseActivity<DatabaseHelper>
     }
 
     public void submit(View view) {
-        activityService.startMainActivity(this);
+        activityService.startUserTargetActivity(this);
     }
 }

@@ -3,10 +3,7 @@ package Services;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import com.example.foodforpleasure.BodeMassIndexesActivity;
-import com.example.foodforpleasure.CharacteristicsActivity;
-import com.example.foodforpleasure.MainActivity;
-import com.example.foodforpleasure.RegistrationActivity;
+import com.example.foodforpleasure.*;
 
 public class ActivityService {
     public void startMainActivity(Context context){
@@ -31,6 +28,11 @@ public class ActivityService {
 
     public void startBodeMassIndexesActivity(Context context){
         Intent intent = new Intent(context, BodeMassIndexesActivity.class);
+        context.startActivity(intent);
+    }
+
+    public void startUserTargetActivity(Context context){
+        Intent intent = new Intent(context, UserTargetActivity.class);
         context.startActivity(intent);
     }
 }
