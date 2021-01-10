@@ -1,4 +1,4 @@
-package Services.Validators.FieldValidatorServices;
+package Validators.FieldValidators;
 
 public class DateValidator implements IFieldValidator {
     private String date;

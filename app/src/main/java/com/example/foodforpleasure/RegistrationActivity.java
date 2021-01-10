@@ -1,35 +1,42 @@
 package com.example.foodforpleasure;
 
-import Services.Validators.FieldValidatorServices.DateValidator;
-import Services.Validators.FieldValidatorServices.StringFieldValidator;
+import Listners.ListnerOnTextChange;
+import Validators.FieldValidators.DateValidator;
+import Validators.FieldValidators.StringFieldValidator;
 import android.content.Intent;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
 public class RegistrationActivity extends AppCompatActivity {
+    private EditText editTextDate;
+    EditText editTextFirstName;
+    EditText editTextSecondName;
+    RadioButton radioButtonWomen;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration);
+
+        editTextDate = findViewById(R.id.editText_UserBirthday);
+        editTextFirstName = findViewById(R.id.editText_UserFirstName);
+        editTextSecondName = findViewById(R.id.editText_UserSecondName);
+        radioButtonWomen = findViewById(R.id.radioButtonFemale);
+
+        editTextDate.addTextChangedListener(new ListnerOnTextChange(this,editTextDate));
     }
 
     public void submitRegistrationStep(View view){
         Intent intent = new Intent(this, CharacteristicsActivity.class);
 
-        EditText editTextDate = findViewById(R.id.editText_UserBirthday);
-        EditText editTextFirstName = findViewById(R.id.editText_UserFirstName);
-        EditText editTextSecondName = findViewById(R.id.editText_UserSecondName);
-        RadioButton radioButtonWomen = findViewById(R.id.radioButtonFemale);
-
         String date = editTextDate.getText().toString();
         String userFirstName = editTextFirstName.getText().toString();
         String userSecondName = editTextSecondName.getText().toString();
-
 
         DateValidator dateValidator = new DateValidator(date);
         StringFieldValidator firstNameValidator = new StringFieldValidator(userFirstName);

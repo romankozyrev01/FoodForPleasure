@@ -1,4 +1,4 @@
-package Services.Validators.FieldValidatorServices;
+package Validators.FieldValidators;
 
 public class StringFieldValidator implements IFieldValidator {
     private String text;

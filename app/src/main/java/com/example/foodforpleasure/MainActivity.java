@@ -27,10 +27,10 @@ public class MainActivity extends OrmLiteBaseActivity<DatabaseHelper>{
 
         IUserDao userDao = new UserDao(getHelper().getUserRuntimeDao());
 
-//        for (User user :
-//                userDao.queryAll()) {
-//            userDao.delete(user);
-//        }
+        for (User user :
+                userDao.queryAll()) {
+            userDao.delete(user);
+        }
         List<User> users = userDao.queryAll();
 
         
