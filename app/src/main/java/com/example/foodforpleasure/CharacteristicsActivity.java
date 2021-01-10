@@ -1,8 +1,8 @@
 package com.example.foodforpleasure;
 
 import Services.ActivityService;
-import Services.Validators.FieldValidatorServices.IFieldValidator;
-import Services.Validators.FieldValidatorServices.StringFieldValidator;
+import Validators.FieldValidators.IFieldValidator;
+import Validators.FieldValidators.StringFieldValidator;
 import android.content.Intent;
 import android.view.View;
 import android.widget.EditText;

@@ -27,19 +27,19 @@ public class MassIndex implements IMassIndex {
 
     @Override
     public String toString() {
-        weight = getIndex();
+        IWeight weight = getIndex();
         if (gender.equals("Мужчина")) {
-            if (weight.getWeight() < 19) {
-                return "Недостаточная масса";
-            } else if (weight.getWeight() >= 19 && weight.getWeight() <= 24) {
-                return "Нормальный вес";
-            } else if (weight.getWeight() >= 25 && weight.getWeight() < 30) {
-                return "Избыточный вес";
-            } else if (weight.getWeight() >= 30 && weight.getWeight() < 40) {
-                return "Ожирвение";
-            } else if (weight.getWeight() >= 40) {
-                return "Избыточный вес";
-            }
+                if (weight.getWeight() < 19) {
+                    return "Недостаточная масса";
+                } else if (weight.getWeight() >= 19 && weight.getWeight() <= 24) {
+                    return "Нормальный вес";
+                } else if (weight.getWeight() >= 25 && weight.getWeight() < 30) {
+                    return "Избыточный вес";
+                } else if (weight.getWeight() >= 30 && weight.getWeight() < 40) {
+                    return "Ожирвение";
+                } else if (weight.getWeight() >= 40) {
+                    return "Избыточный вес";
+                }
         } else{
             if (weight.getWeight() < 20) {
                 return "Недостаточная масса";
