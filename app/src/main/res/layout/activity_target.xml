@@ -8,6 +8,13 @@
         tools:context=".UserTargetActivity" android:backgroundTint="#00000000">
 
     <ImageView
+            android:layout_width="432dp"
+            android:layout_height="746dp" app:srcCompat="@android:drawable/dark_header"
+            android:id="@+id/BackGround" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" android:backgroundTint="#000000"
+            android:background="#FFFFFF"/>
+    <ImageView
             android:layout_width="wrap_content"
             android:layout_height="250dp" app:srcCompat="@drawable/putoff" android:id="@+id/LoseWeight"
             android:scaleType="fitCenter"
