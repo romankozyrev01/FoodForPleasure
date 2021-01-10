@@ -14,7 +14,7 @@ import models.User;
 import java.util.List;
 
 public class MainActivity extends OrmLiteBaseActivity<DatabaseHelper>{
-    private ActivityService startActivityService = new ActivityService();
+    private final ActivityService startActivityService = new ActivityService();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,8 +22,6 @@ public class MainActivity extends OrmLiteBaseActivity<DatabaseHelper>{
         setContentView(R.layout.activity_main);
 
         TextView textView = findViewById(R.id.DailyCalories);
-        
-        
 
         IUserDao userDao = new UserDao(getHelper().getUserRuntimeDao());
 
@@ -33,7 +31,6 @@ public class MainActivity extends OrmLiteBaseActivity<DatabaseHelper>{
         }
         List<User> users = userDao.queryAll();
 
-        
         if(users.size()>0){
             User user = users.get(0);
             IDailyNutrients dailyColories = new DailyColories(user.getStartWeight(),user.getHeight(),user.getAge());

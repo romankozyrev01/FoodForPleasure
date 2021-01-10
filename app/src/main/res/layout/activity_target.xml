@@ -18,6 +18,7 @@
     <Button
             android:text="Сбросить вес"
             android:layout_width="440dp"
+            android:onClick="submitLoseWeight"
             android:layout_height="210dp" android:id="@+id/buttonLoseWeight" android:textStyle="bold"
             android:textSize="24sp" android:textColor="@android:color/white"
             android:fontFamily="sans-serif-thin" android:backgroundTint="#80000000"
