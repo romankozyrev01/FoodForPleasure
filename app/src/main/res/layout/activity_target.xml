@@ -8,13 +8,6 @@
         tools:context=".UserTargetActivity" android:backgroundTint="#00000000">
 
     <ImageView
-            android:layout_width="417dp"
-            android:layout_height="735dp" app:srcCompat="@android:drawable/dark_header"
-            android:id="@+id/imageView4" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" android:backgroundTint="#E6000000"
-            android:background="#000000"/>
-    <ImageView
             android:layout_width="wrap_content"
             android:layout_height="250dp" app:srcCompat="@drawable/putoff" android:id="@+id/LoseWeight"
             android:scaleType="fitCenter"
@@ -32,7 +25,7 @@
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/LoseWeight"
             app:layout_constraintBottom_toBottomOf="@+id/LoseWeight" app:layout_constraintHorizontal_bias="0.517"
-            app:layout_constraintVertical_bias="0.0"/>
+            app:layout_constraintVertical_bias="0.8"/>
     <ImageView
             android:layout_width="match_parent"
             android:layout_height="250dp" app:srcCompat="@drawable/mussles"
@@ -42,14 +35,15 @@
             app:layout_constraintHorizontal_bias="0.0" app:layout_constraintVertical_bias="0.523"/>
     <Button
             android:text="Мышечная масса"
-            android:layout_width="440dp"
-            android:layout_height="210dp" android:id="@+id/buttonGainMuscleMass" android:textSize="24sp"
+            android:layout_width="437dp"
+            android:layout_height="195dp" android:id="@+id/buttonGainMuscleMass" android:textSize="24sp"
             android:fontFamily="sans-serif-thin" android:textColor="@android:color/white"
             android:textStyle="bold" android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:backgroundTint="#80000000"
             app:layout_constraintEnd_toEndOf="@+id/GainMuscleMass" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="@+id/GainMuscleMass"
-            app:layout_constraintTop_toTopOf="@+id/GainMuscleMass"/>
+            app:layout_constraintTop_toTopOf="@+id/GainMuscleMass" app:layout_constraintHorizontal_bias="0.538"
+            app:layout_constraintVertical_bias="0.509"/>
     <ImageView
             android:layout_width="417dp"
             android:layout_height="250dp" app:srcCompat="@drawable/putofweight"
@@ -67,5 +61,5 @@
             app:layout_constraintStart_toStartOf="@+id/GainWeight"
             app:layout_constraintBottom_toBottomOf="@+id/GainWeight"
             app:layout_constraintTop_toTopOf="@+id/GainWeight" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.483" app:layout_constraintVertical_bias="0.555"/>
+            app:layout_constraintHorizontal_bias="0.333" app:layout_constraintVertical_bias="0.491"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
