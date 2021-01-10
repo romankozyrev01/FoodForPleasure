@@ -66,7 +66,7 @@ public class BodeMassIndexesActivity extends OrmLiteBaseActivity<DatabaseHelper>
             userBrokeIndexTextView.setText(new Kilogram(brokeIndex.getIndex().getWeight()).toString());
         }
         else{
-            System.out.println("users not exist");
+            System.out.println("index: users not exist");
             activityService.startRegistrationActivity(this);
         }
     }

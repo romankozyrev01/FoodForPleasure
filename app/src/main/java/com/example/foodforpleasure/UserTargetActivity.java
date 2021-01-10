@@ -3,7 +3,7 @@ package com.example.foodforpleasure;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class Target extends AppCompatActivity {
+public class UserTargetActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
