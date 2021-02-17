@@ -8,6 +8,13 @@
         tools:context=".CharacteristicsActivity">
 
     <ImageView
+            android:src="@drawable/specifications"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/imageView3"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.0" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" android:scaleType="centerCrop"/>
+    <ImageView
             android:layout_width="381dp"
             android:layout_height="288dp" app:srcCompat="@android:drawable/dark_header"
             android:id="@+id/imageView_DarcBackGround2"
@@ -47,24 +54,30 @@
             app:layout_constraintBottom_toBottomOf="@+id/imageView_DarcBackGround2"
             app:layout_constraintTop_toTopOf="@+id/imageView_DarcBackGround2"
             app:layout_constraintEnd_toEndOf="@+id/imageView_DarcBackGround2"
-            app:layout_constraintHorizontal_bias="0.483" app:layout_constraintVertical_bias="0.429"/>
+            app:layout_constraintHorizontal_bias="0.483" app:layout_constraintVertical_bias="0.429"
+            android:textColor="@android:color/white"/>
     <Button
             android:text="@string/process"
-            android:layout_width="wrap_content"
+            android:layout_width="184dp"
             android:onClick="submitRegistrationFinal"
-            android:layout_height="wrap_content" android:id="@+id/button"
+            android:layout_height="66dp" android:id="@+id/button"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintVertical_bias="0.912"/>
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintVertical_bias="0.622" android:textColor="@android:color/white"
+            android:textStyle="bold" android:textSize="24sp" android:fontFamily="sans-serif-thin"
+            android:backgroundTint="#80000000"/>
     <EditText
-            android:layout_width="344dp"
-            android:layout_height="49dp"
+            android:textColorHint="@android:color/white"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
             android:inputType="numberDecimal"
             android:ems="10"
             android:id="@+id/editText_UserWeight"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintVertical_bias="0.357"/>
+            app:layout_constraintVertical_bias="0.359" app:layout_constraintHorizontal_bias="0.491"
+            android:textSize="24sp" android:fontFamily="sans-serif-thin" android:textColor="@android:color/white"
+            android:hint="Введите ваш вес" android:textStyle="bold"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
