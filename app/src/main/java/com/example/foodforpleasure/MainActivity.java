@@ -8,8 +8,8 @@ import com.j256.ormlite.android.apptools.OrmLiteBaseActivity;
 import dbAPI.DatabaseHelper;
 import dbAPI.dao.IDao.IUserDao;
 import dbAPI.dao.UserDao;
-import models.NutrientFormuls.DailyColories;
-import models.NutrientFormuls.IDailyNutrients;
+import models.NutrientFormulas.Calories.DailyCalories;
+import models.NutrientFormulas.Calories.IDailyCaloriesBehavior;
 import models.User;
 
 import java.util.List;
@@ -31,7 +31,7 @@ public class MainActivity extends OrmLiteBaseActivity<DatabaseHelper>{
 
         if(users.size()>0){
             User user = users.get(0);
-            IDailyNutrients dailyColories = new DailyColories(user.getStartWeight(),user.getHeight(),user.getAge());
+            IDailyCaloriesBehavior dailyColories = new DailyCalories(user.getStartWeight(),user.getHeight(),user.getAge());
             textView.setText(Integer.toString(dailyColories.process()));
         }
         else{
