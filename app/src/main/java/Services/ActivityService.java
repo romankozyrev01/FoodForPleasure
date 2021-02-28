@@ -11,7 +11,7 @@ public class ActivityService {
         context.startActivity(intent);
     }
 
-    public void startRegistrationActivity(Context context){
+    public static void startRegistrationActivity(Context context){
         Intent intent = new Intent(context, RegistrationActivity.class);
         context.startActivity(intent);
     }
@@ -21,8 +21,8 @@ public class ActivityService {
         context.startActivity(intent);
     }
 
-    public void startSettingsActivity(Context context){
-        Intent intent = new Intent(context, CharacteristicsActivity.class);
+    public static void startSettingsActivity(Context context){
+        Intent intent = new Intent(context, SettingsActivity.class);
         context.startActivity(intent);
     }
 

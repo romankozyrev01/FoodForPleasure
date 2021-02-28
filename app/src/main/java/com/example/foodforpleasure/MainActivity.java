@@ -2,6 +2,7 @@ package com.example.foodforpleasure;
 
 import Services.ActivityService;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 import com.j256.ormlite.android.apptools.OrmLiteBaseActivity;
 import dbAPI.DatabaseHelper;
@@ -25,10 +26,7 @@ public class MainActivity extends OrmLiteBaseActivity<DatabaseHelper>{
 
         IUserDao userDao = new UserDao(getHelper().getUserRuntimeDao());
 
-        for (User user :
-                userDao.queryAll()) {
-            userDao.delete(user);
-        }
+
         List<User> users = userDao.queryAll();
 
         if(users.size()>0){
@@ -40,5 +38,9 @@ public class MainActivity extends OrmLiteBaseActivity<DatabaseHelper>{
             System.out.println("users not exist");
             startActivityService.startRegistrationActivity(this);
         }
+    }
+
+    public void onSettingsButtonClick(View view){
+        ActivityService.startSettingsActivity(this);
     }
 }
