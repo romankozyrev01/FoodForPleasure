@@ -1,11 +1,11 @@
 package models.NutrientFormulas.Calories;
 
-public class DailyCalories implements IDailyCaloriesBehavior {
+public class DailyCaloriesBehavior implements IDailyCaloriesBehavior {
     Double weight;
     Integer height;
     Integer age;
 
-    public DailyCalories(Double weight, Integer height, Integer age){
+    public DailyCaloriesBehavior(Double weight, Integer height, Integer age){
         this.age = age;
         this.height = height;
         this.weight = weight;

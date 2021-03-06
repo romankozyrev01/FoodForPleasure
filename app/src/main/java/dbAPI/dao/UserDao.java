@@ -40,6 +40,7 @@ public class UserDao implements IUserDao {
     @Override
     public void update(User user) {
         userRuntimeDao.update(user);
+        Log.d("Dao message","User was updated");
     }
 
     @Override
