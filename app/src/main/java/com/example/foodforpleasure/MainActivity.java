@@ -45,8 +45,7 @@ public class MainActivity extends OrmLiteBaseActivity<DatabaseHelper>{
             int proteins = 0;
             int fats = 0;
             int carbohydrates = 0;
-
-
+            System.out.println(this.getDataDir());
 
             switch (user.getGoal()) {
                 case Option.LOSS: {

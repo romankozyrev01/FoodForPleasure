@@ -35,4 +35,6 @@ public class ActivityService {
         Intent intent = new Intent(context, UserTargetActivity.class);
         context.startActivity(intent);
     }
+
+
 }

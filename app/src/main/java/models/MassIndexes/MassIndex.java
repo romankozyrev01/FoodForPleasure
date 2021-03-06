@@ -2,6 +2,7 @@ package models.MassIndexes;
 
 
 
+import Constatnts.Gender;
 import models.Height.IHeight;
 import models.Weight.IWeight;
 import models.Weight.Kilogram;
@@ -28,7 +29,7 @@ public class MassIndex implements IMassIndex {
     @Override
     public String toString() {
         IWeight weight = getIndex();
-        if (gender.equals("Мужчина")) {
+        if (gender.equals(Gender.MALE)) {
                 if (weight.getWeight() < 19) {
                     return "Недостаточная масса";
                 } else if (weight.getWeight() >= 19 && weight.getWeight() <= 24) {
