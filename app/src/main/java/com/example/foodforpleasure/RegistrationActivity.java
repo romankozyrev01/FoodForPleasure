@@ -1,5 +1,6 @@
 package com.example.foodforpleasure;
 
+import Constatnts.Gender;
 import Listners.ListnerOnTextChange;
 import Validators.FieldValidators.DateValidator;
 import Validators.FieldValidators.StringFieldValidator;
@@ -49,10 +50,10 @@ public class RegistrationActivity extends AppCompatActivity {
             intent.putExtra(CharacteristicsActivity.SECOND_USER_NAME, userSecondName);
             intent.putExtra(CharacteristicsActivity.DATE, date);
             if(radioButtonWomen.isActivated()){
-                intent.putExtra(CharacteristicsActivity.GENDER,"Женщина");
+                intent.putExtra(CharacteristicsActivity.GENDER, Gender.FEMALE);
             }
             else {
-                intent.putExtra(CharacteristicsActivity.GENDER,"Мужчина");
+                intent.putExtra(CharacteristicsActivity.GENDER,Gender.MALE);
             }
 
             startActivity(intent);
