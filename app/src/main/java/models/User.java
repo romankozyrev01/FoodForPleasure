@@ -49,6 +49,9 @@ public class User {
     @Column(name="authorized_token")
     private String authorizedToken;
 
+    @Column(name="goal")
+    private String goal;
+
     public String getAuthorizedToken() {
         return authorizedToken;
     }
@@ -144,6 +147,14 @@ public class User {
     public Integer getAge(){
        String[] str =  birthday.toString().split(" ");
        return  2020 - Integer.parseInt(str[str.length - 1]);
+    }
+
+    public String getGoal() {
+        return goal;
+    }
+
+    public void setGoal(String goal) {
+        this.goal = goal;
     }
 
     @Override

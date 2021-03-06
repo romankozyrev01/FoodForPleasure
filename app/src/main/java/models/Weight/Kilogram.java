@@ -12,4 +12,8 @@ public class Kilogram implements IWeight {
         return weight;
     }
 
+    @Override
+    public String toString() {
+        return "" + (int)weight;
+    }
 }

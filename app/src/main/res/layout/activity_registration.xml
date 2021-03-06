@@ -20,8 +20,8 @@
             android:layout_height="wrap_content" android:id="@+id/TextView_Registration"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-            android:textColor="@android:color/white" android:textSize="36sp" android:fontFamily="sans-serif-thin"
-            app:layout_constraintVertical_bias="0.245"
+            android:textColor="@android:color/white" android:textSize="30sp" android:fontFamily="sans-serif-thin"
+            app:layout_constraintVertical_bias="0.154"
             android:textStyle="bold" android:textAlignment="center" app:layout_constraintHorizontal_bias="0.0"/>
     <TextView
             android:text="@string/greetings"
@@ -64,7 +64,7 @@
             android:textSize="24sp" android:fontFamily="sans-serif-thin" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="@+id/imageView"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.491"
-            app:layout_constraintVertical_bias="0.479" android:textColor="@android:color/white"/>
+            android:textColor="@android:color/white"/>
     <EditText
             android:textColorHint="@android:color/white"
             android:layout_width="350dp"
@@ -72,11 +72,12 @@
             android:inputType="date"
             android:ems="10"
             android:id="@+id/editText_UserBirthday"
+            android:maxLength="10"
             android:hint="@string/enterBirthday" android:fontFamily="sans-serif-thin" android:textSize="24sp"
             android:textStyle="bold" app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.491"
-            app:layout_constraintVertical_bias="0.572" android:password="false"
+            app:layout_constraintVertical_bias="0.617"
             android:textColor="@android:color/white"/>
     <Button
             android:text="@string/next"
@@ -86,7 +87,36 @@
             android:onClick="submitRegistrationStep"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="@+id/imageView" app:layout_constraintTop_toTopOf="@+id/imageView"
-            app:layout_constraintVertical_bias="0.831"
+            app:layout_constraintVertical_bias="0.894"
             android:textColor="@android:color/white" android:textStyle="bold" android:textSize="24sp"
             android:fontFamily="sans-serif-thin" android:backgroundTint="#80000000"/>
+    <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            android:drawablePadding="50dp"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.723" android:id="@+id/CheckGender"
+            app:layout_constraintHorizontal_bias="0.508">
+        <RadioButton
+                android:text="Мужчина"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/radioButtonMale"
+                android:fontFamily="sans-serif-thin" android:textSize="24sp"
+                android:textStyle="bold" android:textColor="@android:color/white"
+                style="@style/Widget.AppCompat.CompoundButton.RadioButton" android:buttonTint="#FFFFFF"
+        />
+        <TextView
+                android:layout_width="76dp"
+                android:layout_height="wrap_content" android:id="@+id/textViewSpace" android:layout_weight="1"/>
+        <RadioButton
+                android:text="Женщина"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/radioButtonFemale"
+                android:fontFamily="sans-serif-thin" android:textSize="24sp"
+                android:textStyle="bold" android:textColor="@android:color/white"
+                style="@style/Widget.AppCompat.CompoundButton.RadioButton" android:buttonTint="#FFFFFF"
+        />
+    </RadioGroup>
 </androidx.constraintlayout.widget.ConstraintLayout>

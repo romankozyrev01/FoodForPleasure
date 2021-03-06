@@ -6,13 +6,20 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".MainActivity">
+
     <ImageView
             android:src="@drawable/mainmenu"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/imageView2"
-            android:scaleType="fitXY" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"/>
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView2"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintVertical_bias="1.0"/>
+
     <ImageView
             android:layout_width="381dp"
             android:layout_height="288dp" app:srcCompat="@android:drawable/dark_header"
@@ -69,7 +76,7 @@
     <TextView
             android:text="0"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/UsersFats"
+            android:layout_height="wrap_content" android:id="@+id/UserFats"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
             android:textColor="@android:color/white" android:textSize="24sp" android:fontFamily="sans-serif-thin"
@@ -120,4 +127,17 @@
             android:textColor="@android:color/white" android:textSize="24sp" android:fontFamily="sans-serif-thin"
             app:layout_constraintVertical_bias="0.217"
             android:textStyle="bold" app:layout_constraintHorizontal_bias="0.271"/>
+
+    <Button
+            android:text="Settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/settingsButton"
+            android:onClick="onSettingsButtonClick"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_bias="0.875"
+            app:layout_constraintVertical_bias="0.898"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

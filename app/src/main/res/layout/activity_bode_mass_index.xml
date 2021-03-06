@@ -5,33 +5,35 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".BodeMassIndex">
+        tools:context=".BodeMassIndexesActivity">
 
     <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" app:srcCompat="@drawable/bmi" android:id="@+id/BackGroundBMI"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" android:scaleType="centerCrop"/>
-    <ImageView
-            android:layout_width="391dp"
-            android:layout_height="716dp" app:srcCompat="@android:drawable/dark_header"
-            android:id="@+id/imageView5"
-            android:background="#80000000" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="@+id/BackGroundBMI"
-            app:layout_constraintTop_toTopOf="parent"/>
+            android:src="@drawable/bmi"
+            android:layout_width="529dp"
+            android:layout_height="827dp" android:id="@+id/imageView5"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:scaleType="centerCrop" app:layout_constraintHorizontal_bias="0.027"/>
     <ImageView
             android:layout_width="379dp"
             android:layout_height="33dp" app:srcCompat="@android:drawable/dark_header"
-            android:id="@+id/imageView10"
+            android:id="@+id/DarkBack5"
             android:background="#B3000000" app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintVertical_bias="0.59"/>
     <ImageView
+            android:layout_width="389dp"
+            android:layout_height="124dp" app:srcCompat="@android:drawable/dark_header"
+            android:id="@+id/darkBack"
+            android:background="#B3000000" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_bias="0.011" app:layout_constraintHorizontal_bias="0.727"/>
+    <ImageView
             android:layout_width="379dp"
             android:layout_height="33dp" app:srcCompat="@android:drawable/dark_header"
-            android:id="@+id/imageView9"
+            android:id="@+id/DarkBack4"
             android:background="#B3000000" app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -39,7 +41,7 @@
     <ImageView
             android:layout_width="379dp"
             android:layout_height="33dp" app:srcCompat="@android:drawable/dark_header"
-            android:id="@+id/imageView6"
+            android:id="@+id/DarkBack6"
             android:background="#B3000000" app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -47,7 +49,7 @@
     <ImageView
             android:layout_width="379dp"
             android:layout_height="33dp" app:srcCompat="@android:drawable/dark_header"
-            android:id="@+id/imageView7"
+            android:id="@+id/DarkBack7"
             android:background="#B3000000" app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -55,7 +57,7 @@
     <ImageView
             android:layout_width="379dp"
             android:layout_height="33dp" app:srcCompat="@android:drawable/dark_header"
-            android:id="@+id/imageView8"
+            android:id="@+id/DarkBack3"
             android:background="#B3000000" app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -63,7 +65,7 @@
     <TextView
             android:text="0"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/userCaloriesBreitmanIndex"
+            android:layout_height="wrap_content" android:id="@+id/userBreitmanIndex"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
             android:textColor="@android:color/white" android:textSize="24sp" android:fontFamily="sans-serif-thin"
@@ -72,7 +74,7 @@
     <TextView
             android:text="0"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/userCaloriesNoordenIndex"
+            android:layout_height="wrap_content" android:id="@+id/userNoordenIndex"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
             android:textColor="@android:color/white" android:textSize="24sp" android:fontFamily="sans-serif-thin"
@@ -81,29 +83,28 @@
     <TextView
             android:text="0"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/userCaloriesTatonIndex"
+            android:layout_height="wrap_content" android:id="@+id/userTatonIndex"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
             android:textColor="@android:color/white" android:textSize="24sp" android:fontFamily="sans-serif-thin"
             app:layout_constraintVertical_bias="0.407"
             android:textStyle="bold" app:layout_constraintHorizontal_bias="0.824"/>
     <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/userMassIndex"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            android:textColor="@android:color/white" android:textSize="24sp" android:fontFamily="sans-serif-thin"
+            app:layout_constraintVertical_bias="0.589"
+            android:textStyle="bold" app:layout_constraintHorizontal_bias="0.508"/>
+    <TextView
             android:text="0"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/userCaloriesMassIndex"
+            android:layout_height="wrap_content" android:id="@+id/userBrokeIndex"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
             android:textColor="@android:color/white" android:textSize="24sp" android:fontFamily="sans-serif-thin"
             app:layout_constraintVertical_bias="0.499"
-            android:textStyle="bold" app:layout_constraintHorizontal_bias="0.824"/>
-    <TextView
-            android:text="0"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/userCaloriesBrokeIndex"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-            android:textColor="@android:color/white" android:textSize="24sp" android:fontFamily="sans-serif-thin"
-            app:layout_constraintVertical_bias="0.59"
             android:textStyle="bold" app:layout_constraintHorizontal_bias="0.824"/>
     <TextView
             android:text="Food For Pleasure"
@@ -122,7 +123,7 @@
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
             android:textColor="@android:color/white" android:textSize="24sp" android:fontFamily="sans-serif-thin"
             app:layout_constraintVertical_bias="0.08"
-            android:textStyle="bold" android:textAlignment="center"/>
+            android:textStyle="bold" android:textAlignment="center" android:backgroundTint="#80000000"/>
     <TextView
             android:text="Формула Брейтмена:"
             android:layout_width="wrap_content"
@@ -139,7 +140,6 @@
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
             android:textColor="@android:color/white" android:textSize="24sp" android:fontFamily="sans-serif-thin"
-            app:layout_constraintVertical_bias="0.589"
             android:textStyle="bold" app:layout_constraintHorizontal_bias="0.091"/>
     <TextView
             android:text="Формула Ноордена"
@@ -151,14 +151,14 @@
             app:layout_constraintVertical_bias="0.321"
             android:textStyle="bold" app:layout_constraintHorizontal_bias="0.109"/>
     <TextView
-            android:text="Формула ИМТ"
+            android:text="ИМТ"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/textBox_MassIndex"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
             android:textColor="@android:color/white" android:textSize="24sp" android:fontFamily="sans-serif-thin"
-            app:layout_constraintVertical_bias="0.499"
-            android:textStyle="bold" app:layout_constraintHorizontal_bias="0.083"/>
+            app:layout_constraintVertical_bias="0.589"
+            android:textStyle="bold" app:layout_constraintHorizontal_bias="0.055"/>
     <TextView
             android:text="Формула Татоня"
             android:layout_width="wrap_content"
@@ -168,4 +168,15 @@
             android:textColor="@android:color/white" android:textSize="24sp" android:fontFamily="sans-serif-thin"
             app:layout_constraintVertical_bias="0.407"
             android:textStyle="bold" app:layout_constraintHorizontal_bias="0.094"/>
+    <Button
+            android:text="Далее"
+            android:onClick="submit"
+            android:layout_width="120dp"
+            android:layout_height="56dp" android:id="@+id/submitButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textStyle="bold"
+            android:textColor="@android:color/white" android:textSize="24sp" android:fontFamily="sans-serif-thin"
+            android:backgroundTint="#80000000" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.831"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
