@@ -1,6 +1,6 @@
 package models.NutrientFormulas.Fats;
 
-public class FatsOnGain implements IFatsBehavior {
+public class FatsOnGain implements IFatsOption {
 
     @Override
     public int process(int calories) {

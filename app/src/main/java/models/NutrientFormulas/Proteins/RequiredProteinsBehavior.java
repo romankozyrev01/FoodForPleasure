@@ -1,13 +1,13 @@
 package models.NutrientFormulas.Proteins;
 
 public class RequiredProteinsBehavior {
-    IProteinsBehavior proteinsBehavior;
+    IProteinsOption proteinsBehavior;
 
-    public RequiredProteinsBehavior(IProteinsBehavior behavior){
+    public RequiredProteinsBehavior(IProteinsOption behavior){
         this.proteinsBehavior = behavior;
     }
 
-    public void setProteinsBehavior(IProteinsBehavior proteinsBehavior) {
+    public void setProteinsBehavior(IProteinsOption proteinsBehavior) {
         this.proteinsBehavior = proteinsBehavior;
     }
 

@@ -1,5 +1,5 @@
 package models.NutrientFormulas.Fats;
 
-public interface IFatsBehavior {
+public interface IFatsOption {
     public int process(int calories);
 }

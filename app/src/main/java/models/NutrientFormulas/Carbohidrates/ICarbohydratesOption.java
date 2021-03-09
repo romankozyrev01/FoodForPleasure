@@ -1,5 +1,5 @@
 package models.NutrientFormulas.Carbohidrates;
 
-public interface ICarbohydratesBehavior {
+public interface ICarbohydratesOption {
     public int process(int calories);
 }

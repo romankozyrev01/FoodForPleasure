@@ -1,13 +1,13 @@
 package models.NutrientFormulas.Carbohidrates;
 
 public class RequiredCarbohydratesBehavior {
-    ICarbohydratesBehavior carbohydratesBehavior;
+    ICarbohydratesOption carbohydratesBehavior;
 
-    public RequiredCarbohydratesBehavior(ICarbohydratesBehavior carbohydratesBehavior){
+    public RequiredCarbohydratesBehavior(ICarbohydratesOption carbohydratesBehavior){
         this.carbohydratesBehavior = carbohydratesBehavior;
     }
 
-    public void setCarbohydratesBehavior(ICarbohydratesBehavior carbohydratesBehavior) {
+    public void setCarbohydratesBehavior(ICarbohydratesOption carbohydratesBehavior) {
         this.carbohydratesBehavior = carbohydratesBehavior;
     }
 

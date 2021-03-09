@@ -21,10 +21,7 @@ public class Activity {
     private String name;
 
     @Column(name = "start_time")
-    private Date startTime;
-
-    @Column(name = "end_time")
-    private Date endTime;
+    private Date duration;
 
     @Column(name = "burned_colories")
     private int burnedCalories;
@@ -42,14 +39,6 @@ public class Activity {
         this.name = name;
     }
 
-    public Date getStartTime() {
-        return startTime;
-    }
-
-    public void setStartTime(Date startTime) {
-        this.startTime = startTime;
-    }
-
     public int getBurnedCalories() {
         return burnedCalories;
     }
@@ -58,12 +47,12 @@ public class Activity {
         this.burnedCalories = burnedCalories;
     }
 
-    public Date getEndTime() {
-        return endTime;
+    public Date getDuration() {
+        return duration;
     }
 
-    public void setEndTime(Date endTime) {
-        this.endTime = endTime;
+    public void setDuration(Date duration) {
+        this.duration = duration;
     }
 
     @Override
@@ -71,8 +60,7 @@ public class Activity {
         return "Activity{" +
                 "activity_id=" + activity_id +
                 ", name='" + name + '\'' +
-                ", startTime=" + startTime +
-                ", endTime=" + endTime +
+                ", duration=" + duration +
                 ", burnedCalories=" + burnedCalories +
                 '}';
     }

@@ -1,6 +1,6 @@
 package models.NutrientFormulas.Carbohidrates;
 
-public class CarbohydratesMaintaining implements ICarbohydratesBehavior {
+public class CarbohydratesMaintaining implements ICarbohydratesOption {
 
     @Override
     public int process(int calories) {

@@ -1,8 +1,6 @@
 package models;
 
 
-import models.Weight.IWeight;
-
 import javax.persistence.*;
 
 @Entity
@@ -11,17 +9,26 @@ public class Meal {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long meal_id;
-    private String name;
-    private Integer colories;
-    private Integer proteins;
-    private Integer fats;
-    private Integer carbohidrates;
-    private Integer weight;
-    private Integer row;
 
-    public void setMealId(Long meal_id) {
-        this.meal_id = meal_id;
-    }
+    @Column(name = "name")
+    private String name;
+
+    @Column(name = "calories")
+    private Integer calories;
+
+    @Column(name = "proteins")
+    private Integer proteins;
+
+    @Column(name = "fats")
+    private Integer fats;
+
+    @Column(name = "carbohydrates")
+    private Integer carbohydrates;
+
+    @Column(name = "weight")
+    private Integer weight;
+
+
 
     public Long getMealId() {
         return meal_id;
@@ -35,12 +42,12 @@ public class Meal {
         return name;
     }
 
-    public Integer getColories() {
-        return colories;
+    public Integer getCalories() {
+        return calories;
     }
 
-    public void setColories(Integer colories) {
-        this.colories = colories;
+    public void setCalories(Integer calories) {
+        this.calories = calories;
     }
 
     public Integer getProteins() {
@@ -59,12 +66,12 @@ public class Meal {
         this.fats = fats;
     }
 
-    public Integer getCarbohidrates() {
-        return carbohidrates;
+    public Integer getCarbohydrates() {
+        return carbohydrates;
     }
 
-    public void setCarbohidrates(Integer carbohidrates) {
-        this.carbohidrates = carbohidrates;
+    public void setCarbohydrates(Integer carbohydrates) {
+        this.carbohydrates = carbohydrates;
     }
 
     public Integer getWeight() {
@@ -73,13 +80,5 @@ public class Meal {
 
     public void setWeight(Integer weight) {
         this.weight = weight;
-    }
-
-    public Integer getRow() {
-        return row;
-    }
-
-    public void setRow(Integer row) {
-        this.row = row;
     }
 }

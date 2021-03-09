@@ -1,13 +1,13 @@
 package models.NutrientFormulas.Fats;
 
 public class RequiredFatsBehavior {
-    IFatsBehavior fatsBehavior;
+    IFatsOption fatsBehavior;
 
-    public RequiredFatsBehavior(IFatsBehavior fatsBehavior){
+    public RequiredFatsBehavior(IFatsOption fatsBehavior){
         this.fatsBehavior = fatsBehavior;
     }
 
-    public void setFatsBehavior(IFatsBehavior fatsBehavior) {
+    public void setFatsBehavior(IFatsOption fatsBehavior) {
         this.fatsBehavior = fatsBehavior;
     }
 

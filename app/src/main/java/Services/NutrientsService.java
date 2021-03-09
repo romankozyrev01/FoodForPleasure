@@ -1,36 +1,36 @@
 package Services;
 
-import models.NutrientFormulas.Carbohidrates.ICarbohydratesBehavior;
+import models.NutrientFormulas.Carbohidrates.ICarbohydratesOption;
 import models.NutrientFormulas.Carbohidrates.RequiredCarbohydratesBehavior;
-import models.NutrientFormulas.Fats.IFatsBehavior;
+import models.NutrientFormulas.Fats.IFatsOption;
 import models.NutrientFormulas.Fats.RequiredFatsBehavior;
-import models.NutrientFormulas.Proteins.IProteinsBehavior;
+import models.NutrientFormulas.Proteins.IProteinsOption;
 import models.NutrientFormulas.Proteins.RequiredProteinsBehavior;
 
 public class NutrientsService {
-    private final IProteinsBehavior iProteinsBehavior;
-    private final IFatsBehavior iFatsBehavior;
-    private final ICarbohydratesBehavior iCarbohydratesBehavior;
+    private final IProteinsOption iProteinsOption;
+    private final IFatsOption iFatsOption;
+    private final ICarbohydratesOption iCarbohydratesOption;
     private final int calories;
 
     private int requiredProteins;
     private int requiredFats;
     private int requiredCarbohydrates;
 
-    public NutrientsService(IProteinsBehavior iProteinsBehavior,
-                            IFatsBehavior iFatsBehavior,
-                            ICarbohydratesBehavior iCarbohydratesBehavior,
+    public NutrientsService(IProteinsOption iProteinsOption,
+                            IFatsOption iFatsOption,
+                            ICarbohydratesOption iCarbohydratesOption,
                             int calories){
-        this.iProteinsBehavior = iProteinsBehavior;
-        this.iFatsBehavior = iFatsBehavior;
-        this.iCarbohydratesBehavior = iCarbohydratesBehavior;
+        this.iProteinsOption = iProteinsOption;
+        this.iFatsOption = iFatsOption;
+        this.iCarbohydratesOption = iCarbohydratesOption;
         this.calories = calories;
     }
 
     public void processNutrients(){
-        RequiredProteinsBehavior proteinsBehavior= new RequiredProteinsBehavior(iProteinsBehavior);
-        RequiredFatsBehavior fatsBehavior = new RequiredFatsBehavior(iFatsBehavior);
-        RequiredCarbohydratesBehavior requiredCarbohydratesBehavior = new RequiredCarbohydratesBehavior(iCarbohydratesBehavior);
+        RequiredProteinsBehavior proteinsBehavior= new RequiredProteinsBehavior(iProteinsOption);
+        RequiredFatsBehavior fatsBehavior = new RequiredFatsBehavior(iFatsOption);
+        RequiredCarbohydratesBehavior requiredCarbohydratesBehavior = new RequiredCarbohydratesBehavior(iCarbohydratesOption);
 
         this.requiredProteins = proteinsBehavior.getRequiredOfProteins(this.calories);
         this.requiredFats = fatsBehavior.getRequiredFats(this.calories);

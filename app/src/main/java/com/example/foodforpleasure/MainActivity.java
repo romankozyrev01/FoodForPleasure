@@ -49,33 +49,33 @@ public class MainActivity extends OrmLiteBaseActivity<DatabaseHelper>{
 
             switch (user.getGoal()) {
                 case Option.LOSS: {
-                    IProteinsBehavior iProteinsBehavior = new ProteinsOnLoss();
-                    IFatsBehavior iFatsBehavior = new FatsOnLoss();
-                    ICarbohydratesBehavior iCarbohydratesBehavior = new CarbohydratesOnLoss();
+                    IProteinsOption iProteinsOption = new ProteinsOnLoss();
+                    IFatsOption iFatsOption = new FatsOnLoss();
+                    ICarbohydratesOption iCarbohydratesOption = new CarbohydratesOnLoss();
 
-                    NutrientsService nutrientsService = new NutrientsService(iProteinsBehavior,iFatsBehavior,iCarbohydratesBehavior,calories);
+                    NutrientsService nutrientsService = new NutrientsService(iProteinsOption, iFatsOption, iCarbohydratesOption,calories);
                     proteins = nutrientsService.getRequiredProteins();
                     fats = nutrientsService.getRequiredFats();
                     carbohydrates = nutrientsService.getRequiredCarbohydrates();
                     break;
                 }
                 case Option.GAIN: {
-                    IProteinsBehavior iProteinsBehavior = new ProteinsOnGain();
-                    IFatsBehavior iFatsBehavior = new FatsOnGain();
-                    ICarbohydratesBehavior iCarbohydratesBehavior = new CarbohydratesOnGain();
+                    IProteinsOption iProteinsOption = new ProteinsOnGain();
+                    IFatsOption iFatsOption = new FatsOnGain();
+                    ICarbohydratesOption iCarbohydratesOption = new CarbohydratesOnGain();
 
-                    NutrientsService nutrientsService = new NutrientsService(iProteinsBehavior,iFatsBehavior,iCarbohydratesBehavior,calories);
+                    NutrientsService nutrientsService = new NutrientsService(iProteinsOption, iFatsOption, iCarbohydratesOption,calories);
                     proteins = nutrientsService.getRequiredProteins();
                     fats = nutrientsService.getRequiredFats();
                     carbohydrates = nutrientsService.getRequiredCarbohydrates();
                     break;
                 }
                 case Option.MAIN: {
-                    IProteinsBehavior iProteinsBehavior = new ProteinsMaintaining();
-                    IFatsBehavior iFatsBehavior = new FatsMaintaining();
-                    ICarbohydratesBehavior iCarbohydratesBehavior = new CarbohydratesMaintaining();
+                    IProteinsOption iProteinsOption = new ProteinsMaintaining();
+                    IFatsOption iFatsOption = new FatsMaintaining();
+                    ICarbohydratesOption iCarbohydratesOption = new CarbohydratesMaintaining();
 
-                    NutrientsService nutrientsService = new NutrientsService(iProteinsBehavior,iFatsBehavior,iCarbohydratesBehavior,calories);
+                    NutrientsService nutrientsService = new NutrientsService(iProteinsOption, iFatsOption, iCarbohydratesOption,calories);
                     proteins = nutrientsService.getRequiredProteins();
                     fats = nutrientsService.getRequiredFats();
                     carbohydrates = nutrientsService.getRequiredCarbohydrates();
@@ -97,5 +97,6 @@ public class MainActivity extends OrmLiteBaseActivity<DatabaseHelper>{
 
     public void onSettingsButtonClick(View view){
         ActivityService.startSettingsActivity(this);
+        finish();
     }
 }

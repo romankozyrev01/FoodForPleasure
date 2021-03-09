@@ -1,6 +1,6 @@
 package models.NutrientFormulas.Proteins;
 
-public class ProteinsOnGain implements IProteinsBehavior {
+public class ProteinsOnGain implements IProteinsOption {
 
     @Override
     public int process(int calories) {

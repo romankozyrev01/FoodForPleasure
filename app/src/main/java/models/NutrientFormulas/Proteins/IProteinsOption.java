@@ -1,5 +1,5 @@
 package models.NutrientFormulas.Proteins;
 
-public interface IProteinsBehavior {
+public interface IProteinsOption {
     public int process(int calories);
 }
