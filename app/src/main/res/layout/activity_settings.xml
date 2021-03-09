@@ -7,16 +7,23 @@
         android:layout_height="match_parent"
         tools:context=".SettingsActivity">
 
+    <ImageView
+            android:src="@android:drawable/divider_horizontal_dim_dark"
+            android:layout_width="345dp"
+            android:layout_height="180dp" android:id="@+id/diagramBackground"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            android:background="#DE7FB1"
+            app:layout_constraintHorizontal_bias="0.575" app:layout_constraintBottom_toTopOf="@+id/weightBackground"
+            app:layout_constraintTop_toBottomOf="@+id/userAge" app:layout_constraintVertical_bias="0.506"/>
     <Spinner
             android:layout_width="409dp"
             android:layout_height="wrap_content"
             android:id="@+id/userSpinner"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.084"
+            app:layout_constraintVertical_bias="0.888"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
-
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.0"/>
     <Button
             android:text="delete users"
             android:layout_width="182dp"
@@ -27,6 +34,57 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintVertical_bias="0.203"/>
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintVertical_bias="0.976"/>
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" tools:src="@tools:sample/avatars" android:id="@+id/UserPhoto"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="38dp" android:layout_marginEnd="245dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginBottom="468dp"
+            app:layout_constraintBottom_toTopOf="@+id/userSpinner" app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="32dp" app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintVertical_bias="0.0"/>
+    <TextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content" android:id="@+id/userName"
+            android:fontFamily="sans-serif-thin" android:textSize="24sp"
+            android:textStyle="bold" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_bias="0.867" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.045" android:text="Kirill"/>
+    <TextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content" android:id="@+id/userSurname"
+            android:fontFamily="sans-serif-thin" android:textSize="24sp"
+            android:textStyle="bold" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="0.867"
+            app:layout_constraintVertical_bias="0.115" android:text="Lalov"/>
+    <TextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content" android:id="@+id/userAge"
+            android:fontFamily="sans-serif-thin" android:textSize="24sp"
+            android:textStyle="bold" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.867"
+            app:layout_constraintVertical_bias="0.183" android:text="22"/>
+    <ImageView
+            android:src="@android:drawable/list_selector_background"
+            android:layout_width="345dp"
+            android:layout_height="180dp" android:id="@+id/weightBackground"
+            android:background="#89E6F5" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.749"
+            app:layout_constraintHorizontal_bias="0.575"/>
+    <TextView
+            android:text="Текущий вес"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/currentlyWeight"
+            app:layout_constraintStart_toStartOf="@+id/weightBackground"
+            app:layout_constraintEnd_toEndOf="@+id/weightBackground"
+            app:layout_constraintBottom_toBottomOf="@+id/weightBackground"
+            app:layout_constraintTop_toTopOf="@+id/weightBackground" app:layout_constraintVertical_bias="0.0"
+            android:fontFamily="sans-serif-thin" android:textSize="24sp" android:textStyle="bold"
+            app:layout_constraintHorizontal_bias="0.497"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
