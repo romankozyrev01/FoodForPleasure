@@ -5,7 +5,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".RegistrationActivity">
+        tools:context=".RegistrationActivity" android:backgroundTintMode="multiply">
     <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" app:srcCompat="@drawable/bg" android:id="@+id/bg"
@@ -13,140 +13,146 @@
             android:textColor="@android:color/black"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintVertical_bias="1.0"/>
+            app:layout_constraintVertical_bias="0.0"/>
     <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" app:srcCompat="@drawable/line1" android:id="@+id/upper_line"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintVertical_bias="0.334"/>
-    <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" app:srcCompat="@drawable/input" android:id="@+id/fname_input"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintHorizontal_bias="0.491" app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginBottom="392dp"/>
-    <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" app:srcCompat="@drawable/input" android:id="@+id/sname_input"
-            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintHorizontal_bias="0.491" app:layout_constraintVertical_bias="0.516"/>
-    <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" app:srcCompat="@drawable/input" android:id="@+id/age_input"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="0.491"
-            app:layout_constraintVertical_bias="0.63"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintVertical_bias="0.85" android:scaleX="0.8"
+            app:layout_constraintBottom_toTopOf="@+id/editText_UserFirstName"/>
     <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" app:srcCompat="@drawable/line1" android:id="@+id/lower_line"
+            android:scaleX="0.8"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintVertical_bias="0.751"/>
-    <ImageView
-            android:layout_width="295dp"
-            android:layout_height="73dp" app:srcCompat="@drawable/btn" android:id="@+id/imageView9"
-            android:scaleType="fitEnd"
-            app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintHorizontal_bias="0.517" app:layout_constraintVertical_bias="0.919"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/bg" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.65999997"/>
     <EditText
             android:textColorHint="@android:color/black"
-            android:layout_width="300dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:ems="10"
             android:id="@+id/editText_UserFirstName"
-            android:hint="@string/enterFirstName" android:textStyle="bold"
-            android:textSize="24sp" android:fontFamily="sans-serif-thin" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="@+id/bg"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.495"
-            app:layout_constraintVertical_bias="0.387" android:textColor="@android:color/black"/>
-    <TextView
-            android:text="@string/app_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/textView_GreetingPart2"
+            android:hint="@string/enterFirstName"
+            android:textColor="@android:color/black"
+            android:background="@drawable/input"
+            android:textSize="20sp"
+            android:fontFamily="@font/lemon111"
+            android:paddingStart="30dp"
+            android:paddingBottom="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/editText_UserSecondName"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-            android:textColor="@android:color/black" android:textSize="24sp" android:fontFamily="sans-serif-thin"
-            app:layout_constraintHorizontal_bias="0.497" app:layout_constraintVertical_bias="0.067"
-            android:textStyle="bold"/>
+            app:layout_constraintHorizontal_bias="0.502"/>
     <EditText
             android:textColorHint="@android:color/black"
-            android:layout_width="300dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:ems="10"
             android:id="@+id/editText_UserSecondName"
-            android:hint="@string/enterSecondName" android:textStyle="bold"
-            android:textSize="24sp" android:fontFamily="sans-serif-thin" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="@+id/bg"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.495"
-            android:textColor="@android:color/black"/>
+            android:hint="@string/enterSecondName"
+            android:textSize="20sp" android:fontFamily="@font/lemon111" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textColor="@android:color/black" android:background="@drawable/input" android:paddingLeft="30dp"
+            android:paddingBottom="10dp" app:layout_constraintVertical_bias="1.0"
+            app:layout_constraintBottom_toTopOf="@+id/editText_UserBirthday"
+            app:layout_constraintHorizontal_bias="0.502"/>
     <EditText
             android:textColorHint="@android:color/black"
-            android:layout_width="300dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="date"
             android:ems="10"
             android:id="@+id/editText_UserBirthday"
             android:maxLength="10"
-            android:hint="@string/enterBirthday" android:fontFamily="sans-serif-thin" android:textSize="24sp"
-            android:textStyle="bold" app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.495"
-            app:layout_constraintVertical_bias="0.616"
-            android:textColor="@android:color/black"/>
-    <Button
-            android:text="@string/next"
-            android:layout_width="260dp"
-            android:layout_height="59dp"
-            android:id="@+id/submitButton"
-            android:onClick="submitRegistrationStep"
+            android:hint="@string/enterBirthday" android:fontFamily="@font/lemon111" android:textSize="20sp"
+            android:textColor="@android:color/black" android:background="@drawable/input" android:padding="30dp"
+            android:paddingBottom="10dp" android:autofillHints=""
+            app:layout_constraintBottom_toTopOf="@+id/CheckGender" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+    />
+    <TextView
+            android:text="@string/logo"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textView_GreetingPart2"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toBottomOf="@+id/bg" app:layout_constraintTop_toTopOf="@+id/bg"
-            app:layout_constraintVertical_bias="0.9"
-            android:textColor="@android:color/black" android:textStyle="bold" android:textSize="24sp"
-            android:fontFamily="sans-serif-thin" android:backgroundTint="#00000000"
-            app:layout_constraintHorizontal_bias="0.496" android:background="@drawable/btn"/>
+            app:layout_constraintTop_toTopOf="parent"
+            android:textColor="@android:color/black" android:textSize="30sp" android:fontFamily="@font/lemon111"
+            app:layout_constraintHorizontal_bias="0.497" app:layout_constraintVertical_bias="0.45"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/upper_line"/>
     <RadioGroup
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
-            android:drawablePadding="50dp"
-            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.723" android:id="@+id/CheckGender"
-            app:layout_constraintHorizontal_bias="0.508">
+            android:drawablePadding="45dp"
+            android:id="@+id/CheckGender"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintBottom_toTopOf="@+id/lower_line" app:layout_constraintTop_toTopOf="@+id/bg"
+            app:layout_constraintVertical_bias="0.93">
         <RadioButton
                 android:text="Мужчина"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:id="@+id/radioButtonMale"
-                android:fontFamily="sans-serif-thin" android:textSize="24sp"
-                android:textStyle="bold" android:textColor="@android:color/black"
-                style="@style/Widget.AppCompat.CompoundButton.RadioButton" android:buttonTint="black"
+                android:layout_height="match_parent" android:id="@+id/radioButtonMale"
+                android:fontFamily="@font/lemon111" android:textSize="20sp"
+                android:textColor="@android:color/black"
+                style="@style/Widget.AppCompat.CompoundButton.RadioButton" android:buttonTint="@android:color/black"
         />
         <TextView
-                android:layout_width="49dp"
-                android:layout_height="wrap_content" android:id="@+id/textViewSpace" android:layout_weight="1"/>
+                android:layout_width="48dp"
+                android:layout_height="32dp" android:id="@+id/textViewSpace" android:layout_weight="1"/>
         <RadioButton
                 android:text="Женщина"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" android:id="@+id/radioButtonFemale"
-                android:fontFamily="sans-serif-thin" android:textSize="24sp"
-                android:textStyle="bold" android:textColor="@android:color/black"
-                style="@style/Widget.AppCompat.CompoundButton.RadioButton" android:buttonTint="black"
+                android:fontFamily="@font/lemon111" android:textSize="20sp"
+                android:textColor="@android:color/black"
+                style="@style/Widget.AppCompat.CompoundButton.RadioButton" android:buttonTint="@android:color/black"
         />
     </RadioGroup>
     <TextView
-            android:text="Registration"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/textView_registration"
+            android:text="REGISTRATION"
+            android:fontFamily="@font/lemon111"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            android:layout_width="146dp"
+            android:layout_height="23dp" android:id="@+id/textView_registration"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0.952" app:layout_constraintVertical_bias="0.282"/>
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.97"
+            android:textColor="#000000"
+            app:layout_constraintBottom_toTopOf="@+id/upper_line" app:layout_constraintHorizontal_bias="0.86"/>
+
+    <ImageButton
+            android:layout_width="wrap_content"
+            android:id="@+id/submitButton"
+            android:layout_gravity="center"
+            android:onClick="submitRegistrationStep"
+            android:layout_height="wrap_content" app:srcCompat="@drawable/btn"
+            android:background="#00000000" android:scaleType="fitCenter"
+            app:layout_constraintTop_toBottomOf="@+id/lower_line"
+            app:layout_constraintBottom_toBottomOf="@+id/bg" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintVertical_bias="0.105"
+            app:layout_constraintHorizontal_bias="0.497"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+              android:text="@string/registration"
+              android:gravity="center"
+              android:paddingBottom="25dp"
+              android:textStyle="bold"
+              android:textSize="20sp"
+              android:fontFamily="@font/lemon111"
+              android:id="@+id/textView"
+              app:layout_constraintTop_toTopOf="@+id/submitButton"
+              app:layout_constraintBottom_toBottomOf="@+id/submitButton"
+              app:layout_constraintEnd_toEndOf="@+id/submitButton"
+              app:layout_constraintStart_toStartOf="@+id/submitButton" android:textColor="#000000"/>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
