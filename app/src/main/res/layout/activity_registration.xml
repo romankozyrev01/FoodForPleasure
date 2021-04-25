@@ -8,88 +8,66 @@
         tools:context=".RegistrationActivity">
     <ImageView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" app:srcCompat="@drawable/bg" android:id="@+id/bg"
-            android:scaleType="centerCrop" app:layout_constraintTop_toTopOf="parent"
-            android:textColor="@android:color/black"
+            android:layout_height="wrap_content" app:srcCompat="@drawable/entrance" android:id="@+id/imageView"
+            android:scaleType="center" app:layout_constraintTop_toTopOf="parent"
+            android:textColor="@android:color/white"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintVertical_bias="1.0"/>
-    <ImageView
+            app:layout_constraintVertical_bias="0.0"/>
+    <TextView
+            android:text="@string/registration"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" app:srcCompat="@drawable/line1" android:id="@+id/upper_line"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintVertical_bias="0.334"/>
-    <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" app:srcCompat="@drawable/input" android:id="@+id/fname_input"
+            android:layout_height="wrap_content" android:id="@+id/TextView_Registration"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintHorizontal_bias="0.491" app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginBottom="392dp"/>
-    <ImageView
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            android:textColor="@android:color/white" android:textSize="30sp" android:fontFamily="sans-serif-thin"
+            app:layout_constraintVertical_bias="0.154"
+            android:textStyle="bold" android:textAlignment="center" app:layout_constraintHorizontal_bias="0.0"/>
+    <TextView
+            android:text="@string/greetings"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" app:srcCompat="@drawable/input" android:id="@+id/sname_input"
-            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintHorizontal_bias="0.491" app:layout_constraintVertical_bias="0.516"/>
-    <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" app:srcCompat="@drawable/input" android:id="@+id/age_input"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="0.491"
-            app:layout_constraintVertical_bias="0.63"/>
-    <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" app:srcCompat="@drawable/line1" android:id="@+id/lower_line"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintVertical_bias="0.751"/>
-    <ImageView
-            android:layout_width="295dp"
-            android:layout_height="73dp" app:srcCompat="@drawable/btn" android:id="@+id/imageView9"
-            android:scaleType="fitEnd"
-            app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintHorizontal_bias="0.517" app:layout_constraintVertical_bias="0.919"/>
-    <EditText
-            android:textColorHint="@android:color/black"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:ems="10"
-            android:id="@+id/editText_UserFirstName"
-            android:hint="@string/enterFirstName" android:textStyle="bold"
-            android:textSize="24sp" android:fontFamily="sans-serif-thin" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="@+id/bg"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.495"
-            app:layout_constraintVertical_bias="0.387" android:textColor="@android:color/black"/>
+            android:layout_height="wrap_content" android:id="@+id/TextView_GreetingPart1"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            android:textColor="@android:color/white" android:textSize="24sp" android:fontFamily="sans-serif-thin"
+            app:layout_constraintHorizontal_bias="0.497" app:layout_constraintVertical_bias="0.022"
+            android:textStyle="bold"/>
     <TextView
             android:text="@string/app_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/textView_GreetingPart2"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-            android:textColor="@android:color/black" android:textSize="24sp" android:fontFamily="sans-serif-thin"
+            android:textColor="@android:color/white" android:textSize="24sp" android:fontFamily="sans-serif-thin"
             app:layout_constraintHorizontal_bias="0.497" app:layout_constraintVertical_bias="0.067"
             android:textStyle="bold"/>
     <EditText
-            android:textColorHint="@android:color/black"
-            android:layout_width="300dp"
+            android:textColorHint="@android:color/white"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/editText_UserFirstName"
+            android:hint="@string/enterFirstName" android:textStyle="bold"
+            android:textSize="24sp" android:fontFamily="sans-serif-thin" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="@+id/imageView"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintVertical_bias="0.387" android:textColor="@android:color/white"/>
+    <EditText
+            android:textColorHint="@android:color/white"
+            android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:ems="10"
             android:id="@+id/editText_UserSecondName"
             android:hint="@string/enterSecondName" android:textStyle="bold"
             android:textSize="24sp" android:fontFamily="sans-serif-thin" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="@+id/bg"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.495"
-            android:textColor="@android:color/black"/>
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="@+id/imageView"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.491"
+            android:textColor="@android:color/white"/>
     <EditText
-            android:textColorHint="@android:color/black"
-            android:layout_width="300dp"
+            android:textColorHint="@android:color/white"
+            android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:inputType="date"
             android:ems="10"
@@ -98,21 +76,20 @@
             android:hint="@string/enterBirthday" android:fontFamily="sans-serif-thin" android:textSize="24sp"
             android:textStyle="bold" app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.495"
-            app:layout_constraintVertical_bias="0.616"
-            android:textColor="@android:color/black"/>
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintVertical_bias="0.617"
+            android:textColor="@android:color/white"/>
     <Button
             android:text="@string/next"
-            android:layout_width="260dp"
+            android:layout_width="111dp"
             android:layout_height="59dp"
             android:id="@+id/submitButton"
             android:onClick="submitRegistrationStep"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toBottomOf="@+id/bg" app:layout_constraintTop_toTopOf="@+id/bg"
-            app:layout_constraintVertical_bias="0.9"
-            android:textColor="@android:color/black" android:textStyle="bold" android:textSize="24sp"
-            android:fontFamily="sans-serif-thin" android:backgroundTint="#00000000"
-            app:layout_constraintHorizontal_bias="0.496" android:background="@drawable/btn"/>
+            app:layout_constraintBottom_toBottomOf="@+id/imageView" app:layout_constraintTop_toTopOf="@+id/imageView"
+            app:layout_constraintVertical_bias="0.894"
+            android:textColor="@android:color/white" android:textStyle="bold" android:textSize="24sp"
+            android:fontFamily="sans-serif-thin" android:backgroundTint="#80000000"/>
     <RadioGroup
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -127,26 +104,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" android:id="@+id/radioButtonMale"
                 android:fontFamily="sans-serif-thin" android:textSize="24sp"
-                android:textStyle="bold" android:textColor="@android:color/black"
-                style="@style/Widget.AppCompat.CompoundButton.RadioButton" android:buttonTint="black"
+                android:textStyle="bold" android:textColor="@android:color/white"
+                style="@style/Widget.AppCompat.CompoundButton.RadioButton" android:buttonTint="#FFFFFF"
         />
         <TextView
-                android:layout_width="49dp"
+                android:layout_width="76dp"
                 android:layout_height="wrap_content" android:id="@+id/textViewSpace" android:layout_weight="1"/>
         <RadioButton
                 android:text="Женщина"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" android:id="@+id/radioButtonFemale"
                 android:fontFamily="sans-serif-thin" android:textSize="24sp"
-                android:textStyle="bold" android:textColor="@android:color/black"
-                style="@style/Widget.AppCompat.CompoundButton.RadioButton" android:buttonTint="black"
+                android:textStyle="bold" android:textColor="@android:color/white"
+                style="@style/Widget.AppCompat.CompoundButton.RadioButton" android:buttonTint="#FFFFFF"
         />
     </RadioGroup>
-    <TextView
-            android:text="Registration"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/textView_registration"
-            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0.952" app:layout_constraintVertical_bias="0.282"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

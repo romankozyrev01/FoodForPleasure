@@ -8,76 +8,105 @@
         tools:context=".CharacteristicsActivity">
 
     <ImageView
-            android:src="@drawable/food"
+            android:src="@drawable/bg"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/imageView3"
+            android:layout_height="wrap_content" android:id="@+id/imageView"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-            android:scaleType="centerCrop"/>
-    <ImageView
-            android:layout_width="381dp"
-            android:layout_height="288dp" app:srcCompat="@android:drawable/dark_header"
-            android:id="@+id/imageView_DarcBackGround2"
-            android:background="#80000000" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.155"/>
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.0" app:layout_constraintEnd_toEndOf="parent"
+            android:scaleType="centerCrop" app:layout_constraintHorizontal_bias="0.0"/>
+
+    <ImageButton
+            android:src="@drawable/btn"
+            android:layout_width="wrap_content"
+            android:onClick="submitRegistrationFinal"
+            android:layout_height="wrap_content" android:id="@+id/imageButton2"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView4" app:layout_constraintBottom_toBottomOf="parent"
+            android:backgroundTint="#00000000" app:layout_constraintVertical_bias="0.25"/>
     <TextView
             android:text="Укажите свои данные"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/textView_EnterYourSpecifications"
-            android:textColor="@android:color/white" android:textSize="24sp" android:fontFamily="sans-serif-thin"
-            android:textStyle="bold" app:layout_constraintTop_toTopOf="@+id/imageView_DarcBackGround2"
-            app:layout_constraintBottom_toBottomOf="@+id/imageView_DarcBackGround2"
-            app:layout_constraintEnd_toEndOf="@+id/imageView_DarcBackGround2"
-            app:layout_constraintStart_toStartOf="@+id/imageView_DarcBackGround2"
-            app:layout_constraintVertical_bias="0.082"/>
+            android:textColor="@android:color/primary_text_light" android:textSize="15sp"
+            android:fontFamily="@font/lemon111"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/imageView3"
+            app:layout_constraintTop_toBottomOf="@+id/textBox_ApplicationName"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.84" app:layout_constraintVertical_bias="1.0"/>
     <TextView
-            android:text="Food For Pleasure"
+            android:text="@string/logo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/textBox_ApplicationName"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-            android:textColor="@android:color/white" android:textSize="24sp" android:fontFamily="sans-serif-thin"
-            app:layout_constraintVertical_bias="0.022"
-            android:textStyle="bold" app:layout_constraintHorizontal_bias="0.497"/>
+            android:textColor="@android:color/black" android:textSize="24sp" android:fontFamily="@font/lemon111"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="@+id/imageView" app:layout_constraintBottom_toTopOf="@+id/imageView3"
+            app:layout_constraintVertical_bias="0.45" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
     <EditText
-            android:textColorHint="@android:color/white"
-            android:layout_width="350dp"
+            android:textColorHint="@android:color/black"
+            android:layout_width="370dp"
             android:layout_height="wrap_content"
             android:inputType="number"
             android:ems="10"
             android:id="@+id/editText_UserHeight"
-            android:hint="Введите ваш рост" android:textStyle="bold"
-            android:textSize="24sp" android:fontFamily="sans-serif-thin"
-            app:layout_constraintStart_toStartOf="@+id/imageView_DarcBackGround2"
-            app:layout_constraintBottom_toBottomOf="@+id/imageView_DarcBackGround2"
-            app:layout_constraintTop_toTopOf="@+id/imageView_DarcBackGround2"
-            app:layout_constraintEnd_toEndOf="@+id/imageView_DarcBackGround2"
-            app:layout_constraintHorizontal_bias="0.483" app:layout_constraintVertical_bias="0.429"
-            android:textColor="@android:color/white"/>
-    <Button
-            android:text="@string/process"
-            android:layout_width="184dp"
-            android:onClick="submitRegistrationFinal"
-            android:layout_height="66dp" android:id="@+id/button"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.497"
-            app:layout_constraintVertical_bias="0.622" android:textColor="@android:color/white"
-            android:textStyle="bold" android:textSize="24sp" android:fontFamily="sans-serif-thin"
-            android:backgroundTint="#80000000"/>
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
+            android:paddingBottom="10dp"
+            android:textColor="@android:color/black"
+            android:hint="Введите ваш рост"
+            android:textSize="20sp" android:fontFamily="@font/lemon111"
+            android:background="@drawable/input"
+            app:layout_constraintBottom_toTopOf="@+id/editText_UserWeight" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
     <EditText
-            android:textColorHint="@android:color/white"
-            android:layout_width="350dp"
+            android:textColorHint="@android:color/black"
+            android:layout_width="370dp"
             android:layout_height="wrap_content"
             android:inputType="numberDecimal"
-            android:ems="10"
-            android:id="@+id/editText_UserWeight"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintVertical_bias="0.359" app:layout_constraintHorizontal_bias="0.491"
-            android:textSize="24sp" android:fontFamily="sans-serif-thin" android:textColor="@android:color/white"
-            android:hint="Введите ваш вес" android:textStyle="bold"/>
+            android:textSize="20sp"
+            android:fontFamily="@font/lemon111"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
+            android:paddingBottom="10dp"
+            android:textColor="@android:color/black"
+            android:hint="Введите ваш вес"
+            android:background="@drawable/input" android:id="@+id/editText_UserWeight"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView4" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginBottom="20dp"/>
+    <androidx.constraintlayout.widget.Guideline android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                                android:id="@+id/guideline" app:layout_constraintGuide_begin="20dp"
+                                                android:orientation="vertical"/>
+    <androidx.constraintlayout.widget.Barrier android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                              android:id="@+id/barrier" app:barrierDirection="left"/>
 
+    <ImageView
+            android:src="@drawable/line1"
+            android:layout_width="370dp"
+            android:layout_height="5dp" android:id="@+id/imageView3"
+            app:layout_constraintBottom_toTopOf="@+id/editText_UserHeight"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.9"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ImageView
+            android:src="@drawable/line1"
+            android:layout_width="370dp"
+            android:layout_height="5dp" android:id="@+id/imageView4"
+            app:layout_constraintTop_toTopOf="@+id/imageView"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView" app:layout_constraintVertical_bias="0.655"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.512"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+              android:text="@string/registration"
+              android:gravity="center"
+              android:paddingBottom="25dp"
+              android:textStyle="bold"
+              android:textSize="20sp"
+              android:fontFamily="@font/lemon111"
+              app:layout_constraintEnd_toEndOf="@+id/imageButton2"
+              app:layout_constraintStart_toStartOf="@+id/imageButton2"
+              app:layout_constraintTop_toTopOf="@+id/imageButton2"
+              app:layout_constraintBottom_toBottomOf="@+id/imageButton2" android:textColor="#000000"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

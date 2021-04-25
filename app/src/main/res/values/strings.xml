@@ -1,10 +1,10 @@
 <resources>
-    <string name="app_name">Food For Pleasure</string>
+    <string name="logo">FOOD FOR PLEASURE</string>
     <string name="next">Далее</string>
     <string name="enterBirthday">Введите дату рождения</string>
     <string name="enterSecondName">Введите свою фамилию</string>
     <string name="enterFirstName">Введите свое имя</string>
-    <string name="registration">Добавление нового пользователя</string>
+    <string name="registration">Далее</string>
     <string name="greetings">Вас приветствует</string>
     <string name="process">Рассчитать</string>
 
