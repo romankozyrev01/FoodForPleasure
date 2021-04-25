@@ -75,7 +75,7 @@
             android:paddingBottom="10dp" android:autofillHints=""
             app:layout_constraintBottom_toTopOf="@+id/CheckGender" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintHorizontal_bias="0.508" android:layout_marginBottom="4dp"/>
+    />
     <TextView
             android:text="@string/logo"
             android:gravity="center"
