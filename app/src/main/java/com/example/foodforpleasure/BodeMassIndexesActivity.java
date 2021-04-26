@@ -25,9 +25,7 @@ public class BodeMassIndexesActivity extends OrmLiteBaseActivity<DatabaseHelper>
     private  TextView userBrokeIndexTextView;
     private  ActivityService activityService = new ActivityService();
 
-    public BodeMassIndexesActivity(){
 
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,7 +65,7 @@ public class BodeMassIndexesActivity extends OrmLiteBaseActivity<DatabaseHelper>
         }
         else{
             System.out.println("index: users not exist");
-            activityService.startRegistrationActivity(this);
+            ActivityService.startRegistrationActivity(this);
         }
     }
 

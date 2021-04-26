@@ -3,8 +3,10 @@ package com.example.foodforpleasure;
 import Services.ActivityService;
 import Constatnts.Option;
 import Services.NutrientsService;
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.FrameLayout;
 import android.widget.TextView;
 import com.j256.ormlite.android.apptools.OrmLiteBaseActivity;
 import dbAPI.DatabaseHelper;
@@ -20,6 +22,7 @@ import models.User;
 import java.util.List;
 
 public class MainActivity extends OrmLiteBaseActivity<DatabaseHelper>{
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
